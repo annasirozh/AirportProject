@@ -1,10 +1,13 @@
 package com.solvd.airport.person;
 
-public class Person {
+public abstract class Person {
     private String nameOfPerson;
     private String surnameOfPerson;
-    private int age;
 
+    public Person(String nameOfPerson, String surnameOfPerson) {
+        this.nameOfPerson = nameOfPerson;
+        this.surnameOfPerson = surnameOfPerson;
+    }
     public String getNameOfPerson() {
         return nameOfPerson;
     }
@@ -21,19 +24,12 @@ public class Person {
         this.surnameOfPerson = surnameOfPerson;
     }
 
-    public int getAge() {
-        return age;
+    @Override
+    public String toString() {
+        return "Person{" +
+                "nameOfPerson='" + nameOfPerson + '\'' +
+                ", surnameOfPerson='" + surnameOfPerson + '\'' +
+                '}';
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Person(String nameOfPerson, String surnameOfPerson, int age) {
-        this.nameOfPerson = nameOfPerson;
-        this.surnameOfPerson = surnameOfPerson;
-        this.age = age;
-    }
-
-
+    public abstract void displayInformationAboutPerson();
 }

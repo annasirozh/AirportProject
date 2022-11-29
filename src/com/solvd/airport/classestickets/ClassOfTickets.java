@@ -1,15 +1,17 @@
 package com.solvd.airport.classestickets;
 
-public class ClassOfTickets {
+import java.util.Objects;
 
+public class ClassOfTickets {
     private String nameOfClass;
     private int maxWeightHandLuggage;
-    private int priceOfTicket;
+    private int ticketFare;
     private int countOfplacesForHandLuggage;
-    public ClassOfTickets(String nameOfClass, int maxWeightHandLuggage, int priceOfTicket, int countOfplacesForHandLuggage) {
+
+    public ClassOfTickets(String nameOfClass, int maxWeightHandLuggage, int ticketFare, int countOfplacesForHandLuggage) {
         this.nameOfClass = nameOfClass;
         this.maxWeightHandLuggage = maxWeightHandLuggage;
-        this.priceOfTicket = priceOfTicket;
+        this.ticketFare = ticketFare;
         this.countOfplacesForHandLuggage = countOfplacesForHandLuggage;
     }
 
@@ -29,12 +31,12 @@ public class ClassOfTickets {
         this.maxWeightHandLuggage = maxWeightHandLuggage;
     }
 
-    public int getPriceOfTicket() {
-        return priceOfTicket;
+    public int getTicketFare() {
+        return ticketFare;
     }
 
-    public void setPriceOfTicket(int priceOfTicket) {
-        this.priceOfTicket = priceOfTicket;
+    public void setTicketFare(int ticketFare) {
+        this.ticketFare = ticketFare;
     }
 
     public int getCountOfplacesForHandLuggage() {
@@ -44,6 +46,30 @@ public class ClassOfTickets {
     public void setCountOfplacesForHandLuggage(int countOfplacesForHandLuggage) {
         this.countOfplacesForHandLuggage = countOfplacesForHandLuggage;
     }
+
+    @Override
+    public String toString() {
+        return "ClassOfTickets{" +
+                "nameOfClass='" + nameOfClass + '\'' +
+                ", maxWeightHandLuggage=" + maxWeightHandLuggage +
+                ", ticketFare=" + ticketFare +
+                ", countOfplacesForHandLuggage=" + countOfplacesForHandLuggage +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ClassOfTickets that)) return false;
+        return maxWeightHandLuggage == that.maxWeightHandLuggage && ticketFare == that.ticketFare && countOfplacesForHandLuggage == that.countOfplacesForHandLuggage && Objects.equals(nameOfClass, that.nameOfClass);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfClass, maxWeightHandLuggage, ticketFare, countOfplacesForHandLuggage);
+    }
+
+
 
 
 }

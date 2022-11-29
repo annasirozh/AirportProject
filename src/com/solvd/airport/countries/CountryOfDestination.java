@@ -1,12 +1,13 @@
 package com.solvd.airport.countries;
 
-public class CountryOfDestination {
+import java.util.Objects;
 
+public class CountryOfDestination {
     private String nameOfCountry;
     private int distance;
     private String city;
 
-    public CountryOfDestination(String nameOfCountry, int distance, String city) {
+      public CountryOfDestination() {
         this.nameOfCountry = nameOfCountry;
         this.distance = distance;
         this.city = city;
@@ -36,4 +37,23 @@ public class CountryOfDestination {
         this.city = city;
     }
 
+    @Override
+    public String toString() {
+        return "CountryOfDestination{" +
+                "nameOfCountry='" + nameOfCountry + '\'' +
+                ", distance=" + distance +
+                ", city='" + city + '\'' +
+                '}';
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CountryOfDestination that)) return false;
+        return distance == that.distance && Objects.equals(nameOfCountry, that.nameOfCountry) && Objects.equals(city, that.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfCountry, distance, city);
+    }
 }

@@ -4,37 +4,35 @@ public class Passenger extends Person {
 
     private String passportSeries;
     private int numberOfPassport;
-    private String nationality;
 
-    public Passenger(String nameOfPerson, String surnameOfPerson, int age, String passportSeries, int numberOfPassport, String nationality) {
-        super(nameOfPerson, surnameOfPerson, age);
+    public Passenger(String nameOfPerson, String surnameOfPerson, String passportSeries, String numberOfPassport) {
+        super(nameOfPerson, surnameOfPerson);
         this.passportSeries = passportSeries;
-        this.numberOfPassport = numberOfPassport;
-        this.nationality = nationality;
+        this.numberOfPassport = Integer.parseInt(numberOfPassport);
     }
-
     public String getPassportSeries() {
         return passportSeries;
     }
-
     public void setPassportSeries(String passportSeries) {
         this.passportSeries = passportSeries;
     }
-
     public int getNumberOfPassport() {
         return numberOfPassport;
     }
-
     public void setNumberOfPassport(int numberOfPassport) {
         this.numberOfPassport = numberOfPassport;
     }
 
-    public String getNationality() {
-        return nationality;
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "passportSeries='" + passportSeries + '\'' +
+                '}';
     }
 
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
+    @Override
+    public void displayInformationAboutPerson() {
+        System.out.printf("Passenger: %s \t Passenger surname: %s \n Passenger passportSeries: %s \n Passenger numberOfPassport: %s \n" , super.getNameOfPerson(),super.getSurnameOfPerson(),passportSeries,numberOfPassport);
 
+    }
 }

@@ -2,6 +2,8 @@ package com.solvd.airport.plane;
 
 import com.solvd.airport.person.Pilot;
 
+import java.util.Objects;
+
 public class Plane {
 
     private int modelPlane;
@@ -37,5 +39,15 @@ public class Plane {
         this.maxWeight = maxWeight;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Plane plane)) return false;
+        return modelPlane == plane.modelPlane && maxSpeedPlane == plane.maxSpeedPlane && maxWeight == plane.maxWeight;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(modelPlane, maxSpeedPlane, maxWeight);
+    }
 
 }

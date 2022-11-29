@@ -2,27 +2,28 @@ package com.solvd.airport.plane;
 
 import com.solvd.airport.person.Pilot;
 
+import java.util.Objects;
+
 public class CargoPlane extends Plane{
 
-    private int maximumМolume;
+    private int maximumVolume;
     private int cargoCompartmentSize;
     private int cargoDoorSize;
-    private Pilot pilot;
 
-    public CargoPlane(int modelPlane, int maxSpeedPlane, int maxWeight, int numberOfSeats, Pilot pilot, int maximumМolume, int cargoCompartmentSize, int cargoDoorSize, Pilot pilot1) {
-        super(modelPlane, maxSpeedPlane, maxWeight, numberOfSeats, pilot);
-        this.maximumМolume = maximumМolume;
+
+    public CargoPlane(int modelPlane, int maxSpeedPlane, int maxWeight, int maximumVolume, int cargoCompartmentSize, int cargoDoorSize) {
+        super(modelPlane, maxSpeedPlane, maxWeight);
+        this.maximumVolume = maximumVolume;
         this.cargoCompartmentSize = cargoCompartmentSize;
         this.cargoDoorSize = cargoDoorSize;
-        this.pilot = pilot1;
     }
 
-    public int getMaximumМolume() {
-        return maximumМolume;
+    public int getMaximumVolume() {
+        return maximumVolume;
     }
 
-    public void setMaximumМolume(int maximumМolume) {
-        this.maximumМolume = maximumМolume;
+    public void setMaximumVolume(int maximumVolume) {
+        this.maximumVolume = maximumVolume;
     }
 
     public int getCargoCompartmentSize() {
@@ -40,15 +41,17 @@ public class CargoPlane extends Plane{
     public void setCargoDoorSize(int cargoDoorSize) {
         this.cargoDoorSize = cargoDoorSize;
     }
-
     @Override
-    public Pilot getPilot() {
-        return pilot;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CargoPlane that)) return false;
+        if (!super.equals(o)) return false;
+        return maximumVolume == that.maximumVolume && cargoCompartmentSize == that.cargoCompartmentSize && cargoDoorSize == that.cargoDoorSize;
     }
 
     @Override
-    public void setPilot(Pilot pilot) {
-        this.pilot = pilot;
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), maximumVolume, cargoCompartmentSize, cargoDoorSize);
     }
 
 }
