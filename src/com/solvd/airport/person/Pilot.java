@@ -1,20 +1,28 @@
 package com.solvd.airport.person;
 
 public class Pilot extends Person {
+      private static String qualification;
 
-      private String qualification;
+      //блок инициализации
+      static {
+            qualification = "high";
+      }
+
+
+      public static String getQualification() {
+            return qualification;
+      }
+
+      public static void setQualification(String qualification) {
+            Pilot.qualification = qualification;
+      }
+
+     
       public Pilot(String nameOfPerson, String surnameOfPerson, String qualification) {
             super(nameOfPerson, surnameOfPerson);
             this.qualification = qualification;
       }
 
-      public String getQualification() {
-            return qualification;
-      }
-
-      public void setQualification(String qualification) {
-            this.qualification = qualification;
-      }
 
       @Override
       public void displayInformationAboutPerson() {
