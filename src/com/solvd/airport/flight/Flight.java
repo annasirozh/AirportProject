@@ -3,7 +3,6 @@ package com.solvd.airport.flight;
 
 import com.solvd.airport.DisplayInformation;
 
-import java.sql.Time;
 import java.util.Date;
 import java.util.Objects;
 

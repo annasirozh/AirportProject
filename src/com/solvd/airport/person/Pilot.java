@@ -17,7 +17,7 @@ public class Pilot extends Person {
             Pilot.qualification = qualification;
       }
 
-     
+
       public Pilot(String nameOfPerson, String surnameOfPerson, String qualification) {
             super(nameOfPerson, surnameOfPerson);
             this.qualification = qualification;
