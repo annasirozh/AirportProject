@@ -1,7 +1,12 @@
 package com.solvd.airport.person;
 
+import com.solvd.airport.flight.Flight;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Passenger extends Person {
 
+    static final Logger logger = LogManager.getLogger(Passenger.class.getName());
     private String passportSeries;
     private int numberOfPassport;
 
@@ -32,7 +37,7 @@ public class Passenger extends Person {
 
     @Override
     public void displayInformationAboutPerson() {
-        System.out.printf("Passenger: %s \t Passenger surname: %s \n Passenger passportSeries: %s \n Passenger numberOfPassport: %s \n" , super.getNameOfPerson(),super.getSurnameOfPerson(),passportSeries,numberOfPassport);
+        logger.info("Passenger: %s \t Passenger surname: %s \n Passenger passportSeries: %s \n Passenger numberOfPassport: %s \n" , super.getNameOfPerson(),super.getSurnameOfPerson(),passportSeries,numberOfPassport);
 
     }
 }

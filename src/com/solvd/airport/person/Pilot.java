@@ -1,6 +1,11 @@
 package com.solvd.airport.person;
 
+import com.solvd.airport.flight.Flight;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Pilot extends Person {
+      static final Logger logger = LogManager.getLogger(Pilot.class);
       private static String qualification;
 
       //блок инициализации
@@ -26,6 +31,6 @@ public class Pilot extends Person {
 
       @Override
       public void displayInformationAboutPerson() {
-            System.out.printf("Pilot name: %s \t Pilot surname: %s \n Pilot qualification: %s \n", super.getNameOfPerson(),super.getSurnameOfPerson(),qualification);
+            logger.info("Pilot name: %s \t Pilot surname: %s \n Pilot qualification: %s \n", super.getNameOfPerson(),super.getSurnameOfPerson(),qualification);
       }
 }

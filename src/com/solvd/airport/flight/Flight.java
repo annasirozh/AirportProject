@@ -2,26 +2,30 @@ package com.solvd.airport.flight;
 
 
 import com.solvd.airport.DisplayInformation;
+import com.solvd.airport.countries.Country;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Date;
 import java.util.Objects;
 
 public class Flight implements DisplayInformation {
 
-    private String departureOfCountry;
-    private String cityOfCountry;
-    private String countryOfDestination;
-    private Date departureDate;
+    static final Logger LOGGER = LogManager.getLogger(Flight.class.getName());
+
+    private Country departure;
+    private Country destination;
+    private int distance;
+    private Date departureDate; //LocalDate, LocalTime
     private String departureTime;
     private Date arrivalDate;
     private int travelTime;
     private int price;
 
-
-    public Flight(String departureOfCountry, String cityOfCountry, String countryOfDestination, Date departureDate, String departureTime, Date arrivalDate, int travelTime, int price) {
-        this.departureOfCountry = departureOfCountry;
-        this.cityOfCountry = cityOfCountry;
-        this.countryOfDestination = countryOfDestination;
+    public Flight(Country departure, Country destination, int distance, Date departureDate, String departureTime, Date arrivalDate, int travelTime, int price) {
+        this.departure = departure;
+        this.destination = destination;
+        this.distance = distance;
         this.departureDate = departureDate;
         this.departureTime = departureTime;
         this.arrivalDate = arrivalDate;
@@ -29,28 +33,28 @@ public class Flight implements DisplayInformation {
         this.price = price;
     }
 
-    public String getDepartureOfCountry() {
-        return departureOfCountry;
+    public Country getDeparture() {
+        return departure;
     }
 
-    public void setDepartureOfCountry(String departureOfCountry) {
-        this.departureOfCountry = departureOfCountry;
+    public void setDeparture(Country departure) {
+        this.departure = departure;
     }
 
-    public String getCityOfCountry() {
-        return cityOfCountry;
+    public Country getDestination() {
+        return destination;
     }
 
-    public void setCityOfCountry(String cityOfCountry) {
-        this.cityOfCountry = cityOfCountry;
+    public void setDestination(Country destination) {
+        this.destination = destination;
     }
 
-    public String getCountryOfDestination() {
-        return countryOfDestination;
+    public int getDistance() {
+        return distance;
     }
 
-    public void setCountryOfDestination(String countryOfDestination) {
-        this.countryOfDestination = countryOfDestination;
+    public void setDistance(int distance) {
+        this.distance = distance;
     }
 
     public Date getDepartureDate() {
@@ -96,9 +100,9 @@ public class Flight implements DisplayInformation {
     @Override
     public String toString() {
         return "Flight{" +
-                "departureOfCountry='" + departureOfCountry + '\'' +
-                ", cityOfCountry='" + cityOfCountry + '\'' +
-                ", countryOfDestination='" + countryOfDestination + '\'' +
+                "departure=" + departure +
+                ", destination=" + destination +
+                ", distance=" + distance +
                 ", departureDate=" + departureDate +
                 ", departureTime='" + departureTime + '\'' +
                 ", arrivalDate=" + arrivalDate +
@@ -111,17 +115,20 @@ public class Flight implements DisplayInformation {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Flight flight)) return false;
-        return travelTime == flight.travelTime && price == flight.price && Objects.equals(departureOfCountry, flight.departureOfCountry) && Objects.equals(cityOfCountry, flight.cityOfCountry) && Objects.equals(countryOfDestination, flight.countryOfDestination) && Objects.equals(departureDate, flight.departureDate) && Objects.equals(departureTime, flight.departureTime) && Objects.equals(arrivalDate, flight.arrivalDate);
+        return distance == flight.distance && travelTime == flight.travelTime && price == flight.price && Objects.equals(departure, flight.departure) && Objects.equals(destination, flight.destination) && Objects.equals(departureDate, flight.departureDate) && Objects.equals(departureTime, flight.departureTime) && Objects.equals(arrivalDate, flight.arrivalDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(departureOfCountry, cityOfCountry, countryOfDestination, departureDate, departureTime, arrivalDate, travelTime, price);
+        return Objects.hash(departure, destination, distance, departureDate, departureTime, arrivalDate, travelTime, price);
     }
-
 
     @Override
     public void displayInformation() {
-        System.out.printf("Departure Of Country: %s \n City Of Country: %s \n Country Of Destination: %s \n Departure Date: %s \n Departure Time %s \n Arrival Date %s \n Travel Time %d \n Price %d \n", departureOfCountry,cityOfCountry,countryOfDestination,departureDate,departureTime,arrivalDate,travelTime,price);
+        LOGGER.info("Departure Of Country: {} \n City Of Country: {} \n Country Of Destination: {} \n  City of Destination: {} \n Distance: {} \n " +
+                "Departure Date: {} \n Departure Time {} \n Arrival Date {} \n Travel Time {} \n Price {} \n",departure.getName(),departure.getCity(),
+                destination.getName(),destination.getCity(),distance, departureDate, departureTime, arrivalDate, travelTime, price);
+        //System.out.printf("Departure Of Country: %s \n City Of Country: %s \n Country Of Destination: %s \n Departure Date: %s \n Departure Time %s \n Arrival Date %s \n Travel Time %d \n Price %d \n", departureOfCountry,cityOfCountry,countryOfDestination,departureDate,departureTime,arrivalDate,travelTime,price);
     }
+
 }

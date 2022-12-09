@@ -6,8 +6,4 @@ public class ENameOfCountryIsNULL extends Exception{
         super(message);
     }
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
 }

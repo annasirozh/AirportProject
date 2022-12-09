@@ -1,8 +1,13 @@
 package com.solvd.airport.classestickets;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Objects;
 
 public final class ClassOfTickets {
+
+    static final Logger LOGGER = LogManager.getLogger(ClassOfTickets.class);
 
     TicketClass nameOfClassTicket;
     private int maxWeightHandLuggage;
@@ -70,7 +75,8 @@ public final class ClassOfTickets {
         return Objects.hash(nameOfClassTicket, maxWeightHandLuggage, ticketFare, countOfplacesForHandLuggage);
     }
     public void displayInformationAboutClassOfTickets(){
-        System.out.printf("Name of class ticket: %s \n, Max weight hand Luggage: %d \n, Ticket fare: %d \n,Count of places for hand luggage: %d \n", nameOfClassTicket,maxWeightHandLuggage,ticketFare,countOfplacesForHandLuggage);
+       LOGGER.info("Name of class ticket: %s \n, Max weight hand Luggage: %d \n, Ticket fare: %d \n,Count of places for hand luggage: %d \n", nameOfClassTicket,maxWeightHandLuggage,ticketFare,countOfplacesForHandLuggage);
+        //System.out.printf("Name of class ticket: %s \n, Max weight hand Luggage: %d \n, Ticket fare: %d \n,Count of places for hand luggage: %d \n", nameOfClassTicket,maxWeightHandLuggage,ticketFare,countOfplacesForHandLuggage);
     }
 
 }

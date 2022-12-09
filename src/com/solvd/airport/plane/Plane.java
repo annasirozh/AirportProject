@@ -50,4 +50,12 @@ public class Plane {
         return Objects.hash(modelPlane, maxSpeedPlane, maxWeight);
     }
 
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "modelPlane=" + modelPlane +
+                ", maxSpeedPlane=" + maxSpeedPlane +
+                ", maxWeight=" + maxWeight +
+                '}';
+    }
 }
