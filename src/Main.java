@@ -68,7 +68,7 @@ public class Main {
         int decisionVariable = in.nextInt();
         if (decisionVariable == 1) {
             LOGGER.info("Put your surname");
-
+        //fgnnfgngfnfg
         } else {
             LOGGER.info("Come back to us next time:)");
         }
