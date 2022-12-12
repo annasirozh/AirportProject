@@ -1,40 +1,36 @@
-2022-12-09 17:08:16,602 INFO Main [main] List of available aircraft
-2022-12-09 17:08:16,615 INFO Main [main] Enter country:
-2022-12-09 17:12:39,030 INFO Main [main] List of available aircraft
-2022-12-09 17:12:39,037 INFO Main [main] Enter country:
-2022-12-09 17:14:45,769 INFO Main [main] List of available aircraft
-2022-12-09 17:14:45,774 INFO Main [main] Enter country:
-2022-12-09 17:15:39,292 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]
-2022-12-09 17:15:39,296 INFO Main [main] Enter country:
-2022-12-09 17:15:54,196 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}] 
-
-2022-12-09 17:15:54,202 INFO Main [main] Enter country:
-2022-12-09 17:16:10,701 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
-2022-12-09 17:16:10,705 INFO Main [main] Enter country:
-2022-12-09 17:16:57,554 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
-2022-12-09 17:16:57,562 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
-2022-12-09 17:16:57,565 INFO Main [main] Enter country:
-2022-12-09 18:52:08,903 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
-2022-12-09 18:52:08,903 INFO Main [main] List Of pilot [Person{nameOfPerson='Pavel', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
-2022-12-09 18:52:08,913 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
-2022-12-09 18:52:08,913 INFO Main [main] Enter country:
-2022-12-09 18:59:03,432 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
-2022-12-09 18:59:03,441 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
-2022-12-09 18:59:03,448 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
-2022-12-09 18:59:03,448 INFO Main [main] Enter country:
-2022-12-09 18:59:15,564 INFO Main [main] Our country is: Poland
-2022-12-09 18:59:15,564 INFO Main [main] Your flight:
-2022-12-09 18:59:15,564 INFO c.s.a.f.Flight [main] Departure Of Country: Belarus 
- City Of Country: Minsk 
- Country Of Destination: Poland 
-  City of Destination: Warshawa 
- Distance: 867 
- Departure Date: 2022-12-27T00:00:00.000+0300 
- Departure Time 08:00 
- Arrival Date 2022-12-28T00:00:00.000+0300 
- Travel Time 12 
- Price 8262 
-
-2022-12-09 18:59:15,572 INFO Main [main] Check out the rate: Economy,Comfort, Business...
-2022-12-09 18:59:21,826 INFO Main [main] Our ticket class is: BUSINESS
-2022-12-09 18:59:21,830 INFO Main [main] Price:8512
+2022-12-12 16:19:57,046 INFO Main [main] com.solvd.airport.myLinkedList.MyLinkedList@5403f35f
+2022-12-12 16:19:57,062 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:19:57,068 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:19:57,076 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:19:57,076 INFO Main [main] Enter country:
+2022-12-12 16:20:51,358 INFO Main [main] MyLinkedList{head=com.solvd.airport.myLinkedList.MyLinkedList$Node@5403f35f}
+2022-12-12 16:20:51,366 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:20:51,371 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:20:51,371 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:20:51,380 INFO Main [main] Enter country:
+2022-12-12 16:21:41,433 INFO Main [main] MyLinkedList{head=com.solvd.airport.myLinkedList.MyLinkedList$Node@50ad3bc1}
+2022-12-12 16:21:41,433 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:21:41,442 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:21:41,448 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:21:41,448 INFO Main [main] Enter country:
+2022-12-12 16:22:16,788 INFO Main [main] com.solvd.airport.myLinkedList.MyLinkedList@50ad3bc1
+2022-12-12 16:22:16,788 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:22:16,796 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:22:16,796 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:22:16,804 INFO Main [main] Enter country:
+2022-12-12 16:28:41,964 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:28:41,967 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:28:41,973 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:28:41,976 INFO Main [main] Enter country:
+2022-12-12 16:29:14,709 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:29:14,712 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:29:14,718 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:29:14,721 INFO Main [main] Enter country:
+2022-12-12 16:30:31,241 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:30:31,246 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:30:31,252 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:30:31,254 INFO Main [main] Enter country:
+2022-12-12 16:41:12,050 INFO Main [main] List Of coutry [Country{name='Belarus', city='Minsk'}, Country{name='Poland', city='Warshawa'}, Country{name='Russia', city='Sochi'}]:
+2022-12-12 16:41:12,054 INFO Main [main] List Of pilot [Person{nameOfPerson='Павел', surnameOfPerson='Кичкайло'}, Person{nameOfPerson='Василий', surnameOfPerson='Зарницкий'}]:
+2022-12-12 16:41:12,061 INFO Main [main] List of available aircraft [Plane{modelPlane=345, maxSpeedPlane=6125, maxWeight=590}, Plane{modelPlane=2345, maxSpeedPlane=7200, maxWeight=769}]:
+2022-12-12 16:41:12,063 INFO Main [main] Enter country:

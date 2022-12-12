@@ -19,11 +19,14 @@ import java.util.*;
 
 
 public class Main {
+
+
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     static SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
     public static void main(String[] args) throws ParseException, ENameOfCountryIsNULL, IOException, EFoundFlightISNULL, EFlightsIsNULL {
+
 
         List<Country> countries = createListOfCountry();
         LOGGER.info("List Of coutry {}:", countries);
@@ -60,6 +63,14 @@ public class Main {
             LOGGER.info("Price:" + price);
         } else {
             throw new EFoundFlightISNULL("This country is not in the list of flights");
+        }
+        LOGGER.info("Do you want to buy a ticket? Enter 1 if yes, 0 if no.");
+        int decisionVariable = in.nextInt();
+        if (decisionVariable == 1) {
+            LOGGER.info("Put your surname");
+
+        } else {
+            LOGGER.info("Come back to us next time:)");
         }
 
     }
